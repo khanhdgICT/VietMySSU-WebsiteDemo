@@ -14,16 +14,28 @@ import { ContactSubmission } from '../../contact/entities/contact-submission.ent
 
 dotenv.config();
 
-const AppDataSource = new DataSource({
-  type: 'postgres',
-  host: process.env.DB_HOST || 'localhost',
-  port: parseInt(process.env.DB_PORT) || 5432,
-  username: process.env.DB_USER || 'postgres',
-  password: process.env.DB_PASS || 'postgres',
-  database: process.env.DB_NAME || 'vietmy_callcenter',
-  entities: [User, Role, Permission, Category, Post, Job, MenuItem, AuditLog, JobApplication, ContactSubmission],
-  synchronize: true,
-});
+const dbUrl = process.env.DATABASE_URL;
+
+const AppDataSource = new DataSource(
+  dbUrl
+    ? {
+        type: 'postgres',
+        url: dbUrl,
+        ssl: { rejectUnauthorized: false },
+        entities: [User, Role, Permission, Category, Post, Job, MenuItem, AuditLog, JobApplication, ContactSubmission],
+        synchronize: true,
+      }
+    : {
+        type: 'postgres',
+        host: process.env.DB_HOST || 'localhost',
+        port: parseInt(process.env.DB_PORT) || 5432,
+        username: process.env.DB_USER || 'postgres',
+        password: process.env.DB_PASS || 'postgres',
+        database: process.env.DB_NAME || 'vietmy_callcenter',
+        entities: [User, Role, Permission, Category, Post, Job, MenuItem, AuditLog, JobApplication, ContactSubmission],
+        synchronize: true,
+      },
+);
 
 async function seed() {
   await AppDataSource.initialize();
