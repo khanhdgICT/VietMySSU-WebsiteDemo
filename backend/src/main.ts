@@ -22,9 +22,25 @@ async function bootstrap() {
   // Security
   app.use(helmet());
 
-  // CORS
+  // CORS — allow configured frontend URL + localhost + any *.vercel.app preview
+  const allowedOrigins = [
+    'http://localhost:3000',
+    'http://localhost:3001',
+    ...(frontendUrl ? frontendUrl.split(',').map((o) => o.trim()) : []),
+  ];
+
   app.enableCors({
-    origin: [frontendUrl, 'http://localhost:3000'],
+    origin: (origin, callback) => {
+      // Allow server-to-server (no origin) and explicit allowed list
+      if (!origin || allowedOrigins.includes(origin)) {
+        return callback(null, true);
+      }
+      // Allow all *.vercel.app domains (preview deployments)
+      if (origin.endsWith('.vercel.app')) {
+        return callback(null, true);
+      }
+      callback(new Error(`CORS: ${origin} not allowed`));
+    },
     credentials: true,
     methods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE', 'OPTIONS'],
   });
