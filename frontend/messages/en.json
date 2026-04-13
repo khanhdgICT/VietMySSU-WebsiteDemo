@@ -1,0 +1,78 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About Us",
+    "news": "News",
+    "jobs": "Careers",
+    "contact": "Contact",
+    "getStarted": "Contact Us",
+    "services": {
+      "label": "Services",
+      "inbound": "Inbound Call Center",
+      "outbound": "Outbound Call Center",
+      "bpo": "BPO Services",
+      "ai": "AI Solutions"
+    }
+  },
+  "home": {
+    "meta": {
+      "title": "VietMy SSU - Vietnam's Leading Call Center Solutions",
+      "description": "VietMy SSU provides professional Call Center and BPO services with advanced AI technology. Over 10 years of experience, 500+ clients."
+    },
+    "hero": {
+      "badge": "Vietnam's #1 Trusted Partner",
+      "title": "Vietnam's Leading Call Center Solutions",
+      "description": "We provide professional Call Center and BPO services, helping businesses improve customer service quality with advanced AI technology.",
+      "cta": "Contact Us",
+      "demo": "Watch Demo"
+    }
+  },
+  "footer": {
+    "brand": "VietMy SSU",
+    "tagline": "Vietnam's Leading Call Center & BPO Solutions",
+    "copyright": "All rights reserved.",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Service"
+  },
+  "contact": {
+    "title": "Get In Touch",
+    "subtitle": "We're always ready to help",
+    "form": {
+      "name": "Full Name",
+      "email": "Email",
+      "phone": "Phone",
+      "company": "Company",
+      "subject": "Subject",
+      "message": "Message",
+      "branch": "Branch",
+      "submit": "Send Request",
+      "success": "Sent successfully! We will contact you within 24h."
+    }
+  },
+  "jobs": {
+    "title": "Career Opportunities",
+    "subtitle": "Join the VietMy SSU team",
+    "search": "Search positions...",
+    "apply": "Apply Now",
+    "noJobs": "No matching positions found"
+  },
+  "news": {
+    "title": "News & Events",
+    "search": "Search articles...",
+    "readMore": "Read more",
+    "noNews": "No news available"
+  },
+  "common": {
+    "loading": "Loading...",
+    "error": "An error occurred",
+    "back": "Back",
+    "viewAll": "View all",
+    "learnMore": "Learn more",
+    "submit": "Submit",
+    "cancel": "Cancel",
+    "save": "Save",
+    "delete": "Delete",
+    "edit": "Edit",
+    "search": "Search"
+  }
+}

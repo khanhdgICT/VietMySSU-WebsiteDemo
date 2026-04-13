@@ -1,0 +1,32 @@
+import {
+  Entity,
+  PrimaryGeneratedColumn,
+  Column,
+  CreateDateColumn,
+  ManyToMany,
+} from 'typeorm';
+import { Role } from './role.entity';
+
+@Entity('permissions')
+export class Permission {
+  @PrimaryGeneratedColumn('uuid')
+  id: string;
+
+  @Column({ unique: true })
+  name: string; // e.g. "posts:create", "posts:read", "posts:update", "posts:delete"
+
+  @Column({ nullable: true })
+  description: string;
+
+  @Column()
+  resource: string; // e.g. "posts", "jobs", "users"
+
+  @Column()
+  action: string; // e.g. "create", "read", "update", "delete"
+
+  @ManyToMany(() => Role, (role) => role.permissions)
+  roles: Role[];
+
+  @CreateDateColumn()
+  createdAt: Date;
+}

@@ -1,0 +1,64 @@
+version: '3.8'
+
+services:
+  postgres:
+    image: postgres:16-alpine
+    container_name: vietmy_postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: ${DB_NAME:-vietmy_callcenter}
+      POSTGRES_USER: ${DB_USER:-postgres}
+      POSTGRES_PASSWORD: ${DB_PASS:-postgres123}
+    ports:
+      - '5432:5432'
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    networks:
+      - vietmy_network
+
+  redis:
+    image: redis:7-alpine
+    container_name: vietmy_redis
+    restart: unless-stopped
+    ports:
+      - '6379:6379'
+    networks:
+      - vietmy_network
+
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: vietmy_backend
+    restart: unless-stopped
+    depends_on:
+      - postgres
+      - redis
+    env_file:
+      - ./backend/.env
+    ports:
+      - '3001:3001'
+    networks:
+      - vietmy_network
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    container_name: vietmy_frontend
+    restart: unless-stopped
+    depends_on:
+      - backend
+    env_file:
+      - ./frontend/.env.local
+    ports:
+      - '3000:3000'
+    networks:
+      - vietmy_network
+
+volumes:
+  postgres_data:
+
+networks:
+  vietmy_network:
+    driver: bridge

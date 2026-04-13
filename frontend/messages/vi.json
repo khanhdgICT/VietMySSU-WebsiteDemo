@@ -1,0 +1,78 @@
+{
+  "nav": {
+    "home": "Trang chủ",
+    "about": "Giới thiệu",
+    "news": "Tin tức",
+    "jobs": "Tuyển dụng",
+    "contact": "Liên hệ",
+    "getStarted": "Liên hệ ngay",
+    "services": {
+      "label": "Dịch vụ",
+      "inbound": "Call Center Inbound",
+      "outbound": "Call Center Outbound",
+      "bpo": "Dịch vụ BPO",
+      "ai": "Giải pháp AI"
+    }
+  },
+  "home": {
+    "meta": {
+      "title": "VietMy SSU - Giải pháp Call Center hàng đầu Việt Nam",
+      "description": "VietMy SSU cung cấp dịch vụ Call Center và BPO chuyên nghiệp với công nghệ AI tiên tiến. Hơn 10 năm kinh nghiệm, 500+ khách hàng."
+    },
+    "hero": {
+      "badge": "Đối tác tin cậy hàng đầu",
+      "title": "Giải pháp Call Center hàng đầu Việt Nam",
+      "description": "Chúng tôi cung cấp dịch vụ Call Center và BPO chuyên nghiệp, giúp doanh nghiệp nâng cao chất lượng dịch vụ khách hàng.",
+      "cta": "Liên hệ ngay",
+      "demo": "Xem demo"
+    }
+  },
+  "footer": {
+    "brand": "VietMy SSU",
+    "tagline": "Giải pháp Call Center & BPO hàng đầu Việt Nam",
+    "copyright": "Bảo lưu mọi quyền.",
+    "privacy": "Chính sách bảo mật",
+    "terms": "Điều khoản sử dụng"
+  },
+  "contact": {
+    "title": "Liên hệ với chúng tôi",
+    "subtitle": "Chúng tôi luôn sẵn sàng hỗ trợ bạn",
+    "form": {
+      "name": "Họ và tên",
+      "email": "Email",
+      "phone": "Số điện thoại",
+      "company": "Công ty",
+      "subject": "Chủ đề",
+      "message": "Nội dung tin nhắn",
+      "branch": "Chi nhánh",
+      "submit": "Gửi yêu cầu",
+      "success": "Gửi thành công! Chúng tôi sẽ liên hệ trong 24h."
+    }
+  },
+  "jobs": {
+    "title": "Cơ hội nghề nghiệp",
+    "subtitle": "Tham gia đội ngũ VietMy SSU",
+    "search": "Tìm kiếm vị trí...",
+    "apply": "Ứng tuyển ngay",
+    "noJobs": "Không tìm thấy vị trí phù hợp"
+  },
+  "news": {
+    "title": "Tin tức & Sự kiện",
+    "search": "Tìm kiếm bài viết...",
+    "readMore": "Đọc tiếp",
+    "noNews": "Không có tin tức"
+  },
+  "common": {
+    "loading": "Đang tải...",
+    "error": "Có lỗi xảy ra",
+    "back": "Quay lại",
+    "viewAll": "Xem tất cả",
+    "learnMore": "Tìm hiểu thêm",
+    "submit": "Gửi",
+    "cancel": "Hủy",
+    "save": "Lưu",
+    "delete": "Xóa",
+    "edit": "Chỉnh sửa",
+    "search": "Tìm kiếm"
+  }
+}
